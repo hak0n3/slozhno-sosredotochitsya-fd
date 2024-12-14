@@ -3,3 +3,125 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
+
+.header {
+  padding: 10px; /* media */
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, min-content);
+
+  background: var(--header-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header::before,
+.header::after {
+  content: "";
+  position: absolute;
+  
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.header::before {
+  border-block-start: 1px solid var(--second-color);
+  border-inline-end: 1px solid var(--second-color);
+
+  top: 10px;
+  right: 10px;
+}
+
+.header::after {
+  border-block-end: 1px solid var(--second-color);
+  border-inline-start: 1px solid var(--second-color);
+
+  bottom: 10px;
+  left: 10px;
+}
+
+.title-decor {
+  background-color: var(--second-color);
+}
+
+.header__decoration {
+  position: absolute;
+  top: 10px;
+  right: 19px;
+
+  text-transform: uppercase;
+  color: var(--second-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.header__decoration::after {
+  margin-inline-start: 10px;
+
+  content: "";
+
+  display: inline-block;
+
+  width: 9px;
+  height: 9px;
+  background: var(--second-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--second-color);
+}
+
+.header__theme-menu {
+  margin-block-start: 75px;
+
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  list-style: none;
+}
+
+.header__theme-menu-button {
+  background: transparent;
+  border: none;
+
+  color: var(--second-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--second-color)
+}
+
+.header__title {
+  margin-block-end: 55px;
+
+  color: var(--accent-color);
+  text-shadow: var(--heading-shadow);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 96px;
+}
+
+.header__paragraph {
+  margin-block-end: 66px;
+
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+
+  color: var(--bg-color);
+}
