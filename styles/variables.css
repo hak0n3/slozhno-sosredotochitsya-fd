@@ -1,3 +1,6 @@
 :root {
-  
+  --text-shadow: 4px 4px 0 var(--accent-color);
+  --small-text-shadow: 2px 2px 0 var(--accent-color);
+  --main-text-size: 18px;
+  --main-line-height: 23px;
 }

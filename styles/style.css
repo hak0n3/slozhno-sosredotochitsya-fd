@@ -1,17 +1,20 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background: var(--page-bg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .header {
+  margin-block-end: 40px; /* media */
   padding: 10px; /* media */
 
   position: relative;
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, min-content);
 
   background: var(--header-bg);
   background-repeat: no-repeat;
@@ -24,38 +27,42 @@
   content: "";
   position: absolute;
   
-  inline-size: 25px;
+  inline-size: 25px; 
   block-size: 25px;
 }
 
 .header::before {
-  border-block-start: 1px solid var(--second-color);
-  border-inline-end: 1px solid var(--second-color);
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
 
-  top: 10px;
+  top: 10px; /* media */
   right: 10px;
 }
 
 .header::after {
-  border-block-end: 1px solid var(--second-color);
-  border-inline-start: 1px solid var(--second-color);
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
 
-  bottom: 10px;
+  bottom: 10px; /* media */
   left: 10px;
 }
 
 .title-decor {
-  background-color: var(--second-color);
+  background-color: var(--accent-color);
 }
+
 
 .header__decoration {
   position: absolute;
-  top: 10px;
+  top: 10px; /* media */
   right: 19px;
+}
 
+.header__decoration::before {
+  content: "Rec";
   text-transform: uppercase;
-  color: var(--second-color);
-  font-size: 18px;
+  color: var(--accent-color);
+  font-size: var(--main-text-size);
   font-weight: 400;
   line-height: 25px;
 }
@@ -69,9 +76,9 @@
 
   width: 9px;
   height: 9px;
-  background: var(--second-color);
+  background: var(--accent-color);
   border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--second-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
 .header__theme-menu {
@@ -92,22 +99,22 @@
   background: transparent;
   border: none;
 
-  color: var(--second-color);
+  color: var(--accent-color);
   font-weight: 400;
-  font-size: 18px;
+  font-size: var(--main-text-size);
   line-height: 18px;
   text-transform: lowercase;
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--second-color)
+  border: 1px solid var(--accent-color)
 }
 
 .header__title {
   margin-block-end: 55px;
 
-  color: var(--accent-color);
-  text-shadow: var(--heading-shadow);
+  color: var(--second-color);
+  text-shadow: var(--text-shadow);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 96px;
@@ -120,8 +127,83 @@
   margin-inline-end: auto;
 
   font-weight: 700;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
 
-  color: var(--bg-color);
+  color: var(--assisting-color);
+}
+
+.main {
+  padding-inline: 10px; /* media */
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.main-section:not(:last-child) {
+  margin-block-end: 50px; /* media */
+
+}
+
+.main__title {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+}
+
+.assist-color {
+  color: var(--assisting-color);
+}
+
+.main__subtitle {
+  color: var(--assisting-color);
+  font-weight: 700;
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+}
+
+.main-section__examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-section__title {
+  margin-block-end: 10px; /* media */
+
+  color: var(--assisting-color);
+  font-weight: 700;
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+}
+
+.main-section__title_advice {
+  font-weight: 400;
+}
+
+.main-section__paragraph {
+  font-weight: 400;
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+  color: var(--par-color);
+}
+
+.main-section__link {
+  text-shadow: var(--small-text-shadow);
+  text-decoration: none;
+}
+
+.main-section__gallery-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px; /* media */
+}
+
+.main-section_gallery-image {
+  inline-size: 100%;
+  block-size: 100%;
 }
