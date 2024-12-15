@@ -12,6 +12,10 @@
   --par-color: #f1b2ce;
   --page-bg: url("../images/cover-image-dark.png");
   --decor-opacity: 1;
+  --hover-button-outline: 1px solid rgba(255, 0, 112, 0.4);
+  --hover-underline-color: var(--par-color);
+  --focus-button-border: 1px solid var(--accent-color);
+  --focus-link: 1px solid var(--par-color);
 }
 
 .theme-dark .page {

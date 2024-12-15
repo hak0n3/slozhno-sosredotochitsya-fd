@@ -12,6 +12,10 @@
   --par-color: #353430;
   --page-bg: url("../images/cover-image-light.png");
   --decor-opacity: 0;
+  --hover-button-outline: 1px solid rgba(50, 49, 45, 0.4);
+  --link-underline-color: var(--par-color);
+  --focus-button-border: 1px solid var(--par-color);
+  --focus-link: 1px solid var(--par-color);
 }
 
 .theme-light .page {
