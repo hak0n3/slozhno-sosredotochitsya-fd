@@ -4,4 +4,16 @@
   --main-text-size: 18px;
   --main-line-height: 23px;
   --main-font-family: "IBM Plex mono", monospace;
+
+  --accent-color: #ff0070;
+  --second-color: #DB00FF;
+  --assisting-color: #000028;
+  --text-bg-color: #ff0070;
+  --par-color: #f1b2ce;
+  --page-bg: url("../images/cover-image-dark.png");
+  --decor-opacity: 1;
+  --hover-button-outline: 1px solid rgba(255, 0, 112, 0.4);
+  --hover-underline-color: var(--par-color);
+  --focus-button-border: 1px solid var(--accent-color);
+  --focus-link: 1px solid var(--par-color);
 }

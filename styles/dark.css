@@ -1,9 +1,3 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
   --accent-color: #ff0070;
   --second-color: #DB00FF;
@@ -16,8 +10,4 @@
   --hover-underline-color: var(--par-color);
   --focus-button-border: 1px solid var(--accent-color);
   --focus-link: 1px solid var(--par-color);
-}
-
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
 }

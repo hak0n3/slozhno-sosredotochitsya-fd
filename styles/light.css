@@ -1,9 +1,3 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
   --accent-color: #353430;
   --second-color: #ffc2e6;
@@ -18,6 +12,18 @@
   --focus-link: 1px solid var(--par-color);
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff0070;
+    --second-color: #DB00FF;
+    --assisting-color: #000028;
+    --text-bg-color: #ff0070;
+    --par-color: #f1b2ce;
+    --page-bg: url("../images/cover-image-dark.png");
+    --decor-opacity: 1;
+    --hover-button-outline: 1px solid rgba(255, 0, 112, 0.4);
+    --hover-underline-color: var(--par-color);
+    --focus-button-border: 1px solid var(--accent-color);
+    --focus-link: 1px solid var(--par-color);
+  }
 }
