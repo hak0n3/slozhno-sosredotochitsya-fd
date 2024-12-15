@@ -145,7 +145,7 @@ h4 {
 
 .main {
   padding-inline: 10px;
-  margin-block-end: 40px; /* media */
+  margin-block-end: 40px;
 }
 
 .main-section {
@@ -242,7 +242,7 @@ h4 {
   text-align: center;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 768px) { /* В автотестах на гитхабе проверка идет по 768px, по этому в медиа-запросе проверка по данному значению */
   .header {
     padding: 20px;
     margin-block-end: 60px;
@@ -280,11 +280,16 @@ h4 {
   .header__paragraph {
     inline-size: 364px;
     margin-inline-end: 0;
+    margin-block-end: 163px;
   }
 
   .main {
     padding-inline: 20px;
     margin-block-end: 60px;
+  }
+
+  .main-section__examples-list {
+    gap: 20px;
   }
 
   .main-section:not(:nth-of-type(2)):not(:nth-of-type(4)) {
@@ -314,6 +319,38 @@ h4 {
     margin-block-end: 80px;
   }
 }
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    margin-block-start: 0;
+    margin-block-end: 273px;
+
+    justify-self: center;
+  }
+  
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__title {
+    margin-block-end: 114px;
+    line-height: 130px;
+  }
+
+  .header__paragraph {
+    inline-size: 491px;
+  }
+
+  .main-section:not(:nth-of-type(2)):not(:nth-of-type(4)) {
+      grid-template-columns: 315px 1fr;
+    }
+
+  .main-section:nth-of-type(2) .main-section__examples-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main-section:nth-of-type(2) .main__title {
+    inline-size: 315px;
+  }
 
 }
