@@ -9,8 +9,7 @@
   --second-color: #DB00FF;
   --assisting-color: #000028;
   --par-color: #f1b2ce;
-  --header-bg: url("../images/cover-image-dark.png");
-  --page-bg: url("../images/cover-image.png");
+  --page-bg: url("../images/cover-image-dark.png");
 }
 
 .theme-dark .page {
