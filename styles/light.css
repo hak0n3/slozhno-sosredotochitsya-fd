@@ -14,16 +14,16 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-color: #ff0070;
-    --second-color: #DB00FF;
-    --assisting-color: #000028;
-    --text-bg-color: #ff0070;
-    --par-color: #f1b2ce;
-    --page-bg: url("../images/cover-image-dark.png");
-    --decor-opacity: 1;
-    --hover-button-outline: 1px solid rgba(255, 0, 112, 0.4);
-    --hover-underline-color: var(--par-color);
-    --focus-button-border: 1px solid var(--accent-color);
+    --accent-color: #353430;
+    --second-color: #ffc2e6;
+    --assisting-color: #353430;
+    --text-bg-color: #ff8dcb;
+    --par-color: #353430;
+    --page-bg: url("../images/cover-image-light.png");
+    --decor-opacity: 0;
+    --hover-button-outline: 1px solid rgba(50, 49, 45, 0.4);
+    --link-underline-color: var(--par-color);
+    --focus-button-border: 1px solid var(--par-color);
     --focus-link: 1px solid var(--par-color);
   }
 }

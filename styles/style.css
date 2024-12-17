@@ -12,6 +12,7 @@
   padding: 10px;
 
   block-size: 100vh;
+  min-block-size: 668px;
 
   position: relative;
 
@@ -104,12 +105,12 @@
   color: var(--accent-color);
   font-weight: 400;
   font-size: var(--main-text-size);
-  line-height: 18px;
+  line-height: 1;
   text-transform: lowercase;
   cursor: pointer;
 }
 
-.header__theme-menu-button:hover {
+.header__theme-menu-item:hover {
   outline: var(--hover-button-outline);
 }
 
@@ -123,7 +124,7 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  outline: 1px solid var(--accent-color); /* Для рамки используется outline для корректного отображения hover */
   pointer-events: none;
 }
 
@@ -216,11 +217,11 @@
 .main-section__link {
   text-shadow: var(--small-text-shadow);
   text-decoration: none;
+  border-block-end: 1px solid transparent;
 }
 
 .main-section__link:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--hover-underline-color)
+  border-block-end-color: var(--hover-underline-color)
 }
 
 .main-section__link:focus {
@@ -262,7 +263,7 @@
   text-align: center;
 }
 
-@media (min-width: 768px) { /* В автотестах на гитхабе проверка идет по 768px, по этому в медиа-запросе проверка по данному значению */
+@media (width >= 768px) { /* В автотестах на гитхабе проверка идет по 768px, по этому в медиа-запросе проверка по данному значению */
   .header {
     padding: 20px;
     margin-block-end: 60px;
@@ -344,7 +345,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   .header__theme-menu {
     margin-block-start: 0;
     margin-block-end: 273px;
