@@ -2,7 +2,7 @@
   font-family: var(--main-font-family);
 
   background-color: var(--page-bg-color);
-  background: var(--page-bg);
+  /* background: var(--page-bg); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
