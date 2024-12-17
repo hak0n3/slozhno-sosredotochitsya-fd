@@ -243,6 +243,10 @@
 .main-section_gallery-image {
   inline-size: 100%;
   block-size: 100%;
+
+  display: block;
+
+  object-fit: cover;
 }
 
 .footer {
@@ -326,10 +330,6 @@
   .main-section__gallery-list {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-  }
-  
-  .main-section_gallery-image {
-    object-fit: cover;
   }
 
   .main-section__gallery-item:first-child,
