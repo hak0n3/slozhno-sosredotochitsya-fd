@@ -319,7 +319,7 @@
     grid-template-columns: 236px 1fr;
   }
 
-  .main-section:nth-child(2) .main__title {
+  .main-section:nth-of-type(2) .main__title {
     max-inline-size: 236px;
   }
 
@@ -381,6 +381,10 @@
   .main-section:nth-of-type(2) .main-section__examples-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main-section:nth-of-type(2) .main__title {
+    max-inline-size: 315px;
   }
 
   .main-section:nth-of-type(2) .main__title {
