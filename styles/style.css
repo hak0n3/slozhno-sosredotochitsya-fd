@@ -5,6 +5,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  max-inline-size: 1024px;
 }
 
 .header {
@@ -342,6 +343,7 @@
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 99px;
   }
 }
 
@@ -364,6 +366,7 @@
 
   .header__paragraph {
     inline-size: 491px;
+    margin-block-end: 114px;
   }
 
   .main-section:not(:nth-of-type(2)):not(:nth-of-type(4)) {
@@ -379,4 +382,7 @@
     inline-size: 315px;
   }
 
+  .footer__title {
+    line-height: 130px;
+  }
 }
