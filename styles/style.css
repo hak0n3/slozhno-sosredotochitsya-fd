@@ -87,7 +87,8 @@
 
 .header__theme-menu {
   margin-block: 65px;
-  margin-inline-start: auto;
+
+  justify-self: end;
 }
 
 .header__theme-menu-list {
@@ -355,7 +356,9 @@
   .header__theme-menu {
     margin-block-start: 0;
     margin-block-end: 273px;
-    margin-inline: 377px;
+    margin-inline-start: 20px;
+
+    justify-self: center;
   }
   
   .header__theme-menu-list {
