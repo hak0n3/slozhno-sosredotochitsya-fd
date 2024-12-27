@@ -2,7 +2,7 @@
   font-family: var(--main-font-family);
 
   background-color: var(--page-bg-color);
-  /* background: var(--page-bg); */
+  background-image: var(--page-bg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -23,10 +23,12 @@
   align-items: start;
 }
 
-.header::before,
-.header::after,
-.footer::before,
-.footer::after {
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
   content: "";
   position: absolute;
   
@@ -34,8 +36,7 @@
   block-size: 25px;
 }
 
-.header::before,
-.footer::before {
+.decorated-zone::before {
   border-block-start: 1px solid var(--accent-color);
   border-inline-end: 1px solid var(--accent-color);
 
@@ -43,8 +44,7 @@
   right: 10px;
 }
 
-.header::after,
-.footer::after {
+.decorated-zone::after {
   border-block-end: 1px solid var(--accent-color);
   border-inline-start: 1px solid var(--accent-color);
 
@@ -250,8 +250,15 @@
   object-fit: cover;
 }
 
+.main-section__five-advices {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .footer {
   block-size: 100vh;
+  min-block-size: 668px;
 
   position: relative;
 
@@ -277,14 +284,12 @@
     padding-inline-start: 0;
   }
 
-  .header::before,
-  .footer::before {
-  top: 20px;
-  right: 20px;
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
   }
 
-  .header::after,
-  .footer::after {
+  .decorated-zone::after {
     bottom: 20px;
     left: 20px;
   }
@@ -320,11 +325,15 @@
     gap: 20px;
   }
 
-  .main-section:not(:nth-of-type(2)):not(:nth-of-type(4)) {
+  .main-section {
     grid-template-columns: 236px 1fr;
   }
 
-  .main-section:nth-of-type(2) .main__title {
+  .main-section_wide {
+    grid-template-columns: 1fr;
+  }
+
+  .main-section:not(:last-child) .main__title {
     max-inline-size: 236px;
   }
 
@@ -376,16 +385,20 @@
     margin-block-end: 114px;
   }
 
-  .main-section:not(:nth-of-type(2)):not(:nth-of-type(4)) {
-      grid-template-columns: 315px 1fr;
-    }
+  .main-section {
+    grid-template-columns: 315px 1fr;
+  }
 
-  .main-section:nth-of-type(2) .main-section__examples-list {
+  .main-section_wide {
+    grid-template-columns: 1fr;
+  }
+
+  .main-section_wide .main-section__examples-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .main-section:nth-of-type(2) .main__title {
+  .main-section:not(:last-child) .main__title {
     max-inline-size: 315px;
   }
 
