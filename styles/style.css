@@ -6,15 +6,13 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  max-inline-size: 1024px;
 }
 
 .header {
   margin-block-end: 40px;
-  padding: 10px;
+  padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 
-  block-size: 100vh;
-  min-block-size: 668px;
+  min-block-size: 100vh;
 
   position: relative;
 
@@ -149,7 +147,6 @@
   font-weight: 700;
   font-size: var(--main-text-size);
   line-height: var(--main-line-height);
-
   color: var(--assisting-color);
 }
 
@@ -283,7 +280,6 @@
 
 @media (width >= 768px) { /* В автотестах на гитхабе проверка идет по 768px, по этому в медиа-запросе проверка по данному значению */
   .header {
-    padding: 20px;
     margin-block-end: 60px;
     padding-inline-start: 0;
   }
