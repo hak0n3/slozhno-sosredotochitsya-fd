@@ -95,7 +95,7 @@
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .header__theme-menu-button {
@@ -256,6 +256,10 @@
   gap: 20px;
 }
 
+.main-section_wide:last-child {
+  gap: 10px;
+}
+
 .footer {
   block-size: 100vh;
   min-block-size: 668px;
@@ -331,6 +335,10 @@
 
   .main-section_wide {
     grid-template-columns: 1fr;
+  }
+
+  .main-section_wide:last-child {
+    gap: 20px;
   }
 
   .main-section:not(:last-child) .main__title {
