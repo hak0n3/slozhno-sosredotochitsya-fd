@@ -9,11 +9,11 @@
 }
 
 .header {
-  margin-block-end: 40px;
+  margin-block-end: 30px;
   padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 
   min-block-size: 100vh;
-
+  
   position: relative;
 
   display: grid;
@@ -93,7 +93,7 @@
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .header__theme-menu-button {
@@ -129,9 +129,9 @@
 }
 
 .header__title {
-  margin-block-end: 55px;
+  margin-block-end: 60px;
 
-  color: var(--second-color);
+  color: var(--title-color);
   text-shadow: var(--text-shadow);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -273,7 +273,7 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 96px;
-  color: var(--second-color);
+  color: var(--title-color);
   text-shadow: var(--text-shadow);
   text-align: center;
 }
